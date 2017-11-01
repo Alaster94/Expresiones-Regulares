@@ -1,0 +1,26 @@
+EXPRESIONES REGULARES
+
+Pueden seleccionar la parte que nos interesa de un texto o de cualquier otra cosa que represente 
+un String. Para ello, utilizamos un patrón para indicar que parte es la 
+que queremos comprovar si coincide o buscar.
+
+
+==Pattern pattern = Pattern.compile(nombre)==
+Compila el patron que se ingrese (Al->Alaster).
+#Obtenemos un Pattern con la expresión regular, y de él un Matcher, para extraer los trozos de interés.
+
+==Matcher matcher = pattern.matcher(listaPersonas[i].nombre);
+Se crea el Matcher a partir del patron compilado.
+
+Hace que Matcher busque las letras ingresadas. Que busque palabras y evalua las palabras pora poder ser comparada.
+if (matcher.find()) {
+
+Ejemplo:
+Buscar: Al
+Pattern lo compila para luego hacer la comparacion.
+Pattern pattern = Pattern.compile(Al)
+
+Se procigue a relizar la comparacion para seleccionar las concidencias encontradas que en este caso seria solo una
+(Alaster) que se encuentra en la primera lista y si ubiera otros que iniciaran con Al tambien los elige.
+Matcher matcher = pattern.matcher(listaPersonas[0].Alaster);
+
